@@ -2,6 +2,7 @@
 - Implement and time sorting algorithms in Python
 - Calculate sorting algorithm runtimes using Big-O notation
 - Compare theoretical runtimes with observed runtimes
+- Test corner cases for each sorting algorithm
 ## Files Included
 ### ArraysForComparison.ipynb
 - Create eight arrays of varying length that are sorted by each sorting algorithm
@@ -22,8 +23,8 @@
 	- Successful sorting: array of length 0, array of length 1, array with negative numbers, array with decimals, array of letters, array of strings
 	- Failed sorting: array with string
 - Arrays with different structures
-	- Fastest runtime for equal elements and elements in ascending order (6 seconds)
-	- Slowest runtime for elements in descending order (16 seconds)
+	- Fastest runtime for equal elements and elements in ascending order
+	- Slowest runtime for elements in descending order
 ### HeapSortFinal.ipynb
 - Theoretical and observed runtimes are similar since mean squared error is 0.000001092
 - Time complexity is O(nlog(n))
@@ -32,8 +33,8 @@
 	- Successful sorting: array of length 0, array of length 1, array with negative numbers, array with decimals, array of letters, array of strings
 	- Failed sorting: array with string
 - Arrays with different structures
-	- Fastest runtime for equal elements (0.01 seconds)
-	- Slowest runtime for elements in descending order (0.11 seconds)
+	- Fastest runtime for equal elements
+	- Slowest runtime for elements in descending order
 ### InsertionSortFinal.ipynb
 - Theoretical and observed runtimes are similar since mean squared error is 0.003614408
 - Time complexity is O(n^2)
@@ -42,8 +43,8 @@
 	- Successful sorting: array of length 0, array of length 1, array with negative numbers, array with decimals, array of letters, array of strings
 	- Failed sorting: array with string
 - Arrays with different structures
-	- Fastest runtime for equal elements and elements in ascending order (almost 0 seconds)
-	- Slowest runtime for elements in descending order (17.5 seconds)
+	- Fastest runtime for equal elements and elements in ascending order
+	- Slowest runtime for elements in descending order
 ### MergeSortFinal.ipynb
 - Theoretical and observed runtimes are similar since mean squared error is 0.000004666
 - Time complexity is O(nlog(n))
@@ -52,8 +53,8 @@
 	- Successful sorting: array of length 1, array with negative numbers, array with decimals, array of letters, array of strings
 	- Failed sorting: array of length 0, array with string
 - Arrays with different structures
-	- Fastest runtime for array with equal elements (0.05 seconds)
-	- Slowest runtime for array in descending order (0.07 seconds)
+	- Fastest runtime for array with equal elements
+	- Slowest runtime for array in descending order
 ### QuickSortProbabilisticFinal.ipynb
 - Mean squared error of the equation for the worst time complexity is 0.001923786
 - Mean squared error of the equation for the expected run time is 0.002120841
@@ -64,8 +65,8 @@
 	- Successful sorting: array of length 0, array of length 1, array with negative numbers, array with decimals, array of letters, array of strings
 	- Failed sorting: array with string
 - Arrays with different structures
-	- Fastest runtime for elements with different ones place (0.025 seconds)
-	- Slowest runtime for equal elements (0.2 seconds)
+	- Fastest runtime for elements with different ones place
+	- Slowest runtime for equal elements
 ### RadixSortFinal.ipynb
 - Theoretical and observed runtimes are similar since mean squared error is 0.000002648
 - Time complexity is O(n)
@@ -74,8 +75,8 @@
 	- Successful sorting: array of length 1
 	- Failed sorting: array of length 0, array with negative numbers, array with decimals, array with string, array of letters, array of strings
 - Arrays with different structures
-	- Fastest runtime for equal elements (0.01 seconds)
-	- Slowest runtime for different ones place (0.07 seconds)
+	- Fastest runtime for equal elements
+	- Slowest runtime for different ones place
 ### SelectionSortFinal.ipynb
 - Theoretical and observed runtimes are similar since mean squared error is 0.016570244
 - Time complexity is O(n^2)
@@ -84,5 +85,12 @@
 	- Successful sorting: array of length 0, array of length 1, array with negative numbers, array with decimals, array of letters, array of strings
 	- Failed sorting: array with a string
 - Arrays with different structures
-	- Fastest runtime for array of equal elements (4.2 seconds)
-	- Slowest runtime for array in descending order (4.8 seconds)
+	- Fastest runtime for array of equal elements
+	- Slowest runtime for array in descending order
+## Analysis
+- Radix Sort sorts arrays the fastest
+	- However, radix sort fails for all corner cases except sorting an array of length 1
+- Merge Sort and Heap Sort also sort arrays quickly, and they successfully sort more corner cases than Radix Sort
+- Bubble Sort and Selection Sort slowly sort arrays
+## Conclusion
+- When choosing a sorting algorithm, one must consider structure of arrays needing sorting, time complexity, and space complexity
